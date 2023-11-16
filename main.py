@@ -11,3 +11,4 @@ def top_k_logits(logits, k):
         return tf.where(
             logits < min_values,
             tf.ones_like(logits, dtype=logits.dtype) * -1e10,
+            logits,
