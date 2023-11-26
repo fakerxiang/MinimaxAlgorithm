@@ -33,3 +33,4 @@ def top_p_logits(logits, p):
     min_values = tf.gather_nd(sorted_logits, indices)
     return tf.where(
         logits < min_values,
+        tf.ones_like(logits) * -1e10,
