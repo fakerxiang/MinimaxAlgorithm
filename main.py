@@ -54,3 +54,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
         return {
             'logits': logits,
             'presents': presents,
+        }
