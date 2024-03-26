@@ -134,3 +134,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
                 samples,
                 tf.concat([output, samples], axis=1)
             ]
+
