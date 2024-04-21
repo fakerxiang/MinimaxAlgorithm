@@ -140,3 +140,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
         def cond(*args):
             return True
 
+        _, _, tokens = tf.while_loop(
