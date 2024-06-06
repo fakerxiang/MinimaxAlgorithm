@@ -166,3 +166,4 @@ def top_k_logits(logits, k):
         return logits
 
     def _top_k():
+        values, _ = tf.nn.top_k(logits, k=k)
