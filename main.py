@@ -221,3 +221,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
             next_outputs = step(hparams, prev, past=past)
             logits = next_outputs['logits'][:, -1, :]  / tf.to_float(temperature)
             logits = top_k_logits(logits, k=top_k)
+            logits = top_p_logits(logits, p=top_p)
