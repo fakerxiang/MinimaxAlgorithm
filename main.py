@@ -229,3 +229,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
                 tf.concat([output, samples], axis=1)
 
 def top_k_logits(logits, k):
+    if k == 0:
