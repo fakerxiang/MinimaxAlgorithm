@@ -233,3 +233,4 @@ def top_k_logits(logits, k):
         # no truncation
         return logits
 
+    def _top_k():
