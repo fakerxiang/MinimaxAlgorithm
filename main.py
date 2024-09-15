@@ -244,3 +244,4 @@ def top_k_logits(logits, k):
     return tf.cond(
        tf.equal(k, 0),
        lambda: logits,
+       lambda: _top_k(),
