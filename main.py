@@ -264,3 +264,4 @@ def top_p_logits(logits, p):
         tf.ones_like(logits) * -1e10,
         logits,
     )
+
