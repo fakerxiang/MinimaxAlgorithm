@@ -272,3 +272,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
     else:
         assert context is None, 'Specify exactly one of start_token and context!'
         context = tf.fill([batch_size, 1], start_token)
+
