@@ -276,3 +276,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
     def step(hparams, tokens, past=None):
         lm_output = model.model(hparams=hparams, X=tokens, past=past, reuse=tf.AUTO_REUSE)
 
+        logits = lm_output['logits'][:, :, :hparams.n_vocab]
