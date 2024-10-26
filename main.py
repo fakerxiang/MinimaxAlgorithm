@@ -281,3 +281,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
         presents.set_shape(model.past_shape(hparams=hparams, batch_size=batch_size))
         return {
             'logits': logits,
+            'presents': presents,
