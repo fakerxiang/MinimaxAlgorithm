@@ -294,3 +294,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
             return [
                 next_outputs['presents'] if past is None else tf.concat([past, next_outputs['presents']], axis=-2),
                 samples,
+                tf.concat([output, samples], axis=1)
