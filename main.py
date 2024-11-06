@@ -299,3 +299,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
 
         past, prev, output = body(None, context, context)
 
+        def cond(*args):
