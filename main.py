@@ -323,3 +323,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
 import model
 
 def top_k_logits(logits, k):
+    if k == 0:
