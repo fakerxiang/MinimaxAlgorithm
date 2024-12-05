@@ -341,3 +341,4 @@ def top_k_logits(logits, k):
             logits,
         )
     return tf.cond(
+       tf.equal(k, 0),
