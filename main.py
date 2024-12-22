@@ -354,3 +354,4 @@ def top_p_logits(logits, p):
     cumulative_probs = tf.cumsum(tf.nn.softmax(sorted_logits, axis=-1), axis=-1)
     indices = tf.stack([
         tf.range(0, batch),
+        # number of indices to include
