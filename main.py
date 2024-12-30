@@ -365,3 +365,4 @@ def top_p_logits(logits, p):
     )
 
 
+def sample_sequence(*, hparams, length, start_token=None, batch_size=None, context=None, temperature=1, top_k=0, top_p=1):
