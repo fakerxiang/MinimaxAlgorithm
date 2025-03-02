@@ -384,3 +384,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
         }
 
     with tf.name_scope('sample_sequence'):
+        def body(past, prev, output):
