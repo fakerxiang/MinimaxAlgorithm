@@ -386,3 +386,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
     with tf.name_scope('sample_sequence'):
         def body(past, prev, output):
             next_outputs = step(hparams, prev, past=past)
+            logits = next_outputs['logits'][:, -1, :]  / tf.to_float(temperature)
