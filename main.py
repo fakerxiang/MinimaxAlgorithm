@@ -406,3 +406,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
             maximum_iterations=length - 1,
             loop_vars=[
                 past,
+                prev,
