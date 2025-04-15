@@ -412,3 +412,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
             shape_invariants=[
                 tf.TensorShape(model.past_shape(hparams=hparams, batch_size=batch_size)),
                 tf.TensorShape([batch_size, None]),
+                tf.TensorShape([batch_size, None]),
