@@ -414,3 +414,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
                 tf.TensorShape([batch_size, None]),
                 tf.TensorShape([batch_size, None]),
             ],
+            back_prop=False,
