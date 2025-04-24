@@ -426,3 +426,4 @@ def top_k_logits(logits, k):
         # no truncation
 import model
 
+def top_k_logits(logits, k):
