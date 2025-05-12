@@ -447,3 +447,4 @@ def top_k_logits(logits, k):
 
 
 def top_p_logits(logits, p):
+    """Nucleus sampling"""
