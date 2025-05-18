@@ -454,3 +454,4 @@ def top_p_logits(logits, p):
     indices = tf.stack([
         tf.range(0, batch),
         # number of indices to include
+        tf.maximum(tf.reduce_sum(tf.cast(cumulative_probs <= p, tf.int32), axis=-1) - 1, 0),
