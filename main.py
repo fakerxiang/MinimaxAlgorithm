@@ -468,3 +468,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
     if start_token is None:
         assert context is not None, 'Specify exactly one of start_token and context!'
     else:
+        assert context is None, 'Specify exactly one of start_token and context!'
