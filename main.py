@@ -482,3 +482,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
             'presents': presents,
         }
 
+    with tf.name_scope('sample_sequence'):
