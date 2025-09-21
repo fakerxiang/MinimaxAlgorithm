@@ -491,3 +491,4 @@ def sample_sequence(*, hparams, length, start_token=None, batch_size=None, conte
             samples = tf.multinomial(logits, num_samples=1, output_dtype=tf.int32)
             return [
                 next_outputs['presents'] if past is None else tf.concat([past, next_outputs['presents']], axis=-2),
+                samples,
